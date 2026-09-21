@@ -1,0 +1,156 @@
+/* ==========================================================
+   TechNova - estilos propios (complementan a Bootstrap 5)
+   ========================================================== */
+
+:root {
+  --tn-navy: #0f172a;      /* fondo de navbar y footer */
+  --tn-indigo: #4338ca;    /* color principal de botones */
+  --tn-indigo-dark: #3730a3;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* evita que la navbar fija tape los anclajes */
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+/* ---------- Fondo oscuro reutilizable ---------- */
+.bg-tn {
+  background-color: var(--tn-navy);
+}
+
+/* ---------- Enlace "saltar al contenido" ---------- */
+.skip-link:focus {
+  position: fixed;
+  top: .5rem;
+  left: .5rem;
+  z-index: 2000;
+  padding: .5rem 1rem;
+  background: #fff;
+  color: #000;
+  border-radius: .375rem;
+}
+
+/* ---------- Botón principal con el color de la marca ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--tn-indigo);
+  --bs-btn-border-color: var(--tn-indigo);
+  --bs-btn-hover-bg: var(--tn-indigo-dark);
+  --bs-btn-hover-border-color: var(--tn-indigo-dark);
+  --bs-btn-active-bg: var(--tn-indigo-dark);
+  --bs-btn-active-border-color: var(--tn-indigo-dark);
+  --bs-btn-disabled-bg: var(--tn-indigo);
+  --bs-btn-disabled-border-color: var(--tn-indigo);
+}
+
+/* Foco visible para navegación con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar .nav-link.active {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #facc15;
+}
+
+@media (min-width: 992px) {
+  #form-busqueda {
+    min-width: 300px;
+  }
+}
+
+/* ---------- Portada ---------- */
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(250, 204, 21, .25), transparent 40%),
+    linear-gradient(135deg, #312e81 0%, #4338ca 55%, #6366f1 100%);
+}
+
+.hero-kicker {
+  color: #fde68a;
+  letter-spacing: .08em;
+}
+
+/* ---------- Tarjetas de producto ---------- */
+.card-producto {
+  border: 0;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .75rem 1.5rem rgba(15, 23, 42, .15) !important;
+}
+
+.card-producto .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #e2e8f0;
+}
+
+.precio {
+  color: var(--tn-indigo-dark);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* ---------- Carrito ---------- */
+/* En pantallas grandes el carrito queda visible al hacer scroll */
+@media (min-width: 992px) {
+  .carrito-sticky {
+    position: sticky;
+    top: 5.5rem;
+  }
+}
+
+.item-carrito-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: .375rem;
+  flex-shrink: 0;
+}
+
+.item-carrito-nombre {
+  font-size: .9rem;
+  line-height: 1.2;
+}
+
+.control-cantidad .btn {
+  --bs-btn-padding-y: .1rem;
+  --bs-btn-padding-x: .5rem;
+}
+
+.control-cantidad .cantidad {
+  min-width: 2rem;
+  text-align: center;
+  align-self: center;
+  font-weight: 600;
+}
+
+/* Animación breve del contador al agregar un producto */
+@keyframes rebote {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.5); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.contador-rebote {
+  animation: rebote .4s ease;
+}
+
+/* Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  .card-producto,
+  .contador-rebote {
+    transition: none;
+    animation: none;
+  }
+  .card-producto:hover { transform: none; }
+}

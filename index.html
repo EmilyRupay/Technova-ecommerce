@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TechNova: tienda online de tecnología. Audio, computación y accesorios con carrito de compras dinámico.">
+  <title>TechNova | Tecnología y accesorios</title>
+
+  <!-- Bootstrap 5 e íconos (archivos locales en assets/css) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Enlace de accesibilidad: permite saltar la navegación con el teclado -->
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ========== BARRA DE NAVEGACIÓN ========== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-tn" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <i class="bi bi-lightning-charge-fill text-warning" aria-hidden="true"></i> TechNova
+        </a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <!-- Acceso rápido al carrito con contador -->
+          <a class="btn btn-outline-light position-relative" href="#carrito" id="btn-ir-carrito">
+            <i class="bi bi-cart3" aria-hidden="true"></i>
+            <span class="visually-hidden">Ir al carrito. Productos en el carrito:</span>
+            <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                  aria-controls="menu-principal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <!-- Categorías simuladas: JavaScript filtra según data-categoria -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu-categorias">
+            <li class="nav-item"><a class="nav-link active" href="#productos" data-categoria="Todos" aria-current="true">Todos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#productos" data-categoria="Audio">Audio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#productos" data-categoria="Computación">Computación</a></li>
+            <li class="nav-item"><a class="nav-link" href="#productos" data-categoria="Accesorios">Accesorios</a></li>
+          </ul>
+
+          <!-- Formulario de búsqueda (evento submit) -->
+          <form id="form-busqueda" class="d-flex" role="search" novalidate>
+            <label for="input-busqueda" class="visually-hidden">Buscar productos por nombre</label>
+            <input id="input-busqueda" class="form-control me-2" type="search" placeholder="Buscar productos…" autocomplete="off">
+            <button class="btn btn-warning text-nowrap" type="submit">
+              <i class="bi bi-search" aria-hidden="true"></i> <span class="d-lg-none d-xl-inline">Buscar</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ========== PORTADA ========== -->
+    <section id="inicio" class="hero text-white" aria-labelledby="titulo-hero">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <p class="text-uppercase fw-semibold mb-2 hero-kicker">Envíos a todo Chile</p>
+            <h1 id="titulo-hero" class="display-5 fw-bold">Tecnología que acompaña tu día a día</h1>
+            <p class="lead mb-4">Audio, computación y accesorios seleccionados para estudiar, trabajar y jugar.</p>
+            <a href="#productos" class="btn btn-warning btn-lg">Ver productos <i class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-5">
+      <div class="row g-4">
+
+        <!-- ========== LISTA DE PRODUCTOS ========== -->
+        <section id="productos" class="col-lg-8 col-xl-9" aria-labelledby="titulo-productos">
+          <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-3 gap-2">
+            <h2 id="titulo-productos" class="h3 mb-0">Productos <span id="titulo-categoria" class="text-body-secondary fs-5"></span></h2>
+            <!-- Región "en vivo": los lectores de pantalla anuncian los cambios -->
+            <p id="estado-resultados" class="mb-0 text-body-secondary" role="status" aria-live="polite"></p>
+          </div>
+
+          <!-- Aquí JavaScript inserta las tarjetas, el cargador o el mensaje de error -->
+          <div id="lista-productos" class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4" aria-busy="true"></div>
+        </section>
+
+        <!-- ========== RESUMEN DEL CARRITO ========== -->
+        <aside id="carrito" class="col-lg-4 col-xl-3" aria-labelledby="titulo-carrito">
+          <div class="card shadow-sm carrito-sticky">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+              <h2 id="titulo-carrito" class="h5 mb-0"><i class="bi bi-cart3" aria-hidden="true"></i> Tu carrito</h2>
+              <span id="resumen-cantidad" class="badge text-bg-secondary">0 ítems</span>
+            </div>
+
+            <div class="card-body p-0">
+              <p id="carrito-vacio" class="text-center text-body-secondary p-4 mb-0">
+                <i class="bi bi-bag fs-1 d-block mb-2" aria-hidden="true"></i>
+                Tu carrito está vacío.<br>Agrega productos para verlos aquí.
+              </p>
+              <ul id="lista-carrito" class="list-group list-group-flush" aria-live="polite"></ul>
+            </div>
+
+            <div id="pie-carrito" class="card-footer bg-white d-none">
+              <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                <span>Total</span>
+                <span id="total-carrito">$0</span>
+              </div>
+              <div class="d-grid gap-2">
+                <button id="btn-finalizar" type="button" class="btn btn-primary">
+                  <i class="bi bi-credit-card" aria-hidden="true"></i> Finalizar compra
+                </button>
+                <button id="btn-vaciar" type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash" aria-hidden="true"></i> Vaciar carrito
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="bg-tn text-white-50 pt-5 pb-3" id="contacto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h2 class="h5 text-white"><i class="bi bi-lightning-charge-fill text-warning" aria-hidden="true"></i> TechNova</h2>
+          <p class="mb-0">Tu tienda de tecnología y accesorios. Proyecto académico para Desarrollo Frontend I (PFY2201).</p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="h6 text-white text-uppercase">Contacto</h2>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-envelope me-2" aria-hidden="true"></i><a href="mailto:contacto@technova.cl" class="link-light">contacto@technova.cl</a></li>
+            <li><i class="bi bi-telephone me-2" aria-hidden="true"></i>+56 2 2345 6789</li>
+            <li><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Santiago, Chile</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2 class="h6 text-white text-uppercase">Síguenos</h2>
+          <ul class="list-inline fs-4 mb-0">
+            <li class="list-inline-item"><a class="link-light" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a class="link-light" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a class="link-light" href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item"><a class="link-light" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small mb-0">&copy; 2026 TechNova. Sitio de demostración, los productos y precios son simulados.</p>
+    </div>
+  </footer>
+
+  <!-- Aviso emergente (toast) para confirmar acciones -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toast-aviso" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div id="toast-mensaje" class="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar aviso"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (necesario para navbar colapsable y toast) y lógica de la tienda -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

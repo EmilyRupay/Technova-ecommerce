@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Audífonos Inalámbricos Nova",
+    "categoria": "Audio",
+    "precio": 49990,
+    "imagen": "assets/img/audifonos-nova.svg",
+    "alt": "Audífonos inalámbricos over-ear de color azul índigo",
+    "descripcion": "Bluetooth 5.3, cancelación de ruido y 30 horas de batería."
+  },
+  {
+    "id": 2,
+    "nombre": "Parlante Bluetooth Pulse",
+    "categoria": "Audio",
+    "precio": 34990,
+    "imagen": "assets/img/parlante-pulse.svg",
+    "alt": "Parlante Bluetooth portátil de color fucsia",
+    "descripcion": "Sonido 360°, resistente al agua IPX6 y 12 horas de autonomía."
+  },
+  {
+    "id": 3,
+    "nombre": "Micrófono USB Studio",
+    "categoria": "Audio",
+    "precio": 42990,
+    "imagen": "assets/img/microfono-studio.svg",
+    "alt": "Micrófono de condensador USB con base de escritorio",
+    "descripcion": "Ideal para streaming, podcast y videollamadas. Plug & play."
+  },
+  {
+    "id": 4,
+    "nombre": "Teclado Mecánico K87",
+    "categoria": "Computación",
+    "precio": 59990,
+    "imagen": "assets/img/teclado-mecanico-k87.svg",
+    "alt": "Teclado mecánico compacto negro con teclas claras",
+    "descripcion": "Formato TKL, switches rojos y retroiluminación LED."
+  },
+  {
+    "id": 5,
+    "nombre": "Mouse Gamer Ergo",
+    "categoria": "Computación",
+    "precio": 24990,
+    "imagen": "assets/img/mouse-gamer-ergo.svg",
+    "alt": "Mouse gamer ergonómico de color naranja oscuro",
+    "descripcion": "Sensor de 16.000 DPI, 6 botones programables y diseño ergonómico."
+  },
+  {
+    "id": 6,
+    "nombre": "Webcam Full HD 1080p",
+    "categoria": "Computación",
+    "precio": 29990,
+    "imagen": "assets/img/webcam-full-hd.svg",
+    "alt": "Webcam Full HD con clip de montaje para monitor",
+    "descripcion": "Enfoque automático, micrófono integrado y cubierta de privacidad."
+  },
+  {
+    "id": 7,
+    "nombre": "Mochila Urbana Tech",
+    "categoria": "Accesorios",
+    "precio": 39990,
+    "imagen": "assets/img/mochila-urbana-tech.svg",
+    "alt": "Mochila urbana verde con bolsillo frontal",
+    "descripcion": "Compartimiento acolchado para notebook de hasta 15,6\" y puerto USB."
+  },
+  {
+    "id": 8,
+    "nombre": "Cargador Rápido 65W",
+    "categoria": "Accesorios",
+    "precio": 27990,
+    "imagen": "assets/img/cargador-rapido-65w.svg",
+    "alt": "Cargador de pared de carga rápida de 65 vatios con cable",
+    "descripcion": "Tecnología GaN, compatible con notebooks, tablets y celulares."
+  }
+]
