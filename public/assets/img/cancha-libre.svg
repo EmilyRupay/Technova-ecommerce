@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Portada de Cancha Libre: pelota de básquetbol sobre fondo naranja">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0284c7"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+  <rect width="600" height="450" fill="url(#g)"/>
+  <circle cx="300" cy="175" r="95" fill="#ea580c"/><path d="M205 175 H395 M300 80 V270" stroke="#1c1917" stroke-width="6"/><path d="M235 105 C275 145 275 205 235 245 M365 105 C325 145 325 205 365 245" stroke="#1c1917" stroke-width="6" fill="none"/>
+  <rect x="0" y="330" width="600" height="120" fill="#000" opacity=".55"/>
+  <text x="300" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#fff" letter-spacing="1">CANCHA LIBRE</text>
+  <text x="300" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#fbbf24" letter-spacing="4">DEPORTES</text>
+</svg>

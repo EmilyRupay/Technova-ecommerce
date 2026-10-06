@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Portada de Velocidad Extrema GT: carretera en perspectiva al atardecer">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dc2626"/><stop offset="1" stop-color="#450a0a"/></linearGradient></defs>
+  <rect width="600" height="450" fill="url(#g)"/>
+  <circle cx="300" cy="200" r="70" fill="#fde047"/><rect x="0" y="200" width="600" height="130" fill="#1f2937"/><path d="M220 330 L290 200 H310 L380 330 Z" fill="#374151"/><path d="M300 210 V230 M300 250 V280 M300 300 V330" stroke="#fde047" stroke-width="6"/>
+  <rect x="0" y="330" width="600" height="120" fill="#000" opacity=".55"/>
+  <text x="300" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#fff" letter-spacing="1">VELOCIDAD EXTREMA GT</text>
+  <text x="300" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#fde047" letter-spacing="4">CARRERAS</text>
+</svg>

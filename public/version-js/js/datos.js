@@ -1,0 +1,112 @@
+/* ==========================================================
+   datos.js - Objeto JavaScript con la información de los videojuegos.
+   Cada videojuego tiene: nombre, categoría, precio, descripción e imagen.
+   ========================================================== */
+'use strict';
+
+const tienda = {
+  nombre: 'TechNova Games',
+  categorias: ['Todos', 'Acción', 'Aventura', 'Deportes', 'Carreras', 'Estrategia'],
+  videojuegos: [
+    {
+      id: 1,
+      nombre: "Galaxy Raiders",
+      categoria: "Acción",
+      plataforma: "PS5 · PC",
+      precio: 39990,
+      descripcion: "Shooter espacial a toda velocidad: defiende la galaxia en 40 misiones y modo cooperativo para 2 jugadores.",
+      imagen: '../assets/img/galaxy-raiders.svg',
+      alt: "Portada de Galaxy Raiders: nave espacial entre estrellas sobre fondo morado"
+    },
+    {
+      id: 2,
+      nombre: "Ciudad Neón",
+      categoria: "Acción",
+      plataforma: "PS5 · Xbox Series",
+      precio: 44990,
+      descripcion: "Combates cuerpo a cuerpo en una metrópolis futurista llena de luces, parkour y jefes finales.",
+      imagen: '../assets/img/ciudad-neon.svg',
+      alt: "Portada de Ciudad Neón: edificios iluminados con luces fucsia"
+    },
+    {
+      id: 3,
+      nombre: "Reino de las Sombras",
+      categoria: "Aventura",
+      plataforma: "Nintendo Switch · PC",
+      precio: 49990,
+      descripcion: "Explora un mundo abierto de fantasía, resuelve acertijos y descubre los secretos del reino.",
+      imagen: '../assets/img/reino-sombras.svg',
+      alt: "Portada de Reino de las Sombras: montañas y luna sobre un castillo lejano"
+    },
+    {
+      id: 4,
+      nombre: "Isla Perdida",
+      categoria: "Aventura",
+      plataforma: "Nintendo Switch",
+      precio: 29990,
+      descripcion: "Sobrevive en una isla misteriosa: recolecta recursos, construye refugios y encuentra la salida.",
+      imagen: '../assets/img/isla-perdida.svg',
+      alt: "Portada de Isla Perdida: isla con palmera en medio del mar"
+    },
+    {
+      id: 5,
+      nombre: "Gol Maestro 26",
+      categoria: "Deportes",
+      plataforma: "PS5 · Xbox Series · PC",
+      precio: 54990,
+      descripcion: "Fútbol con ligas licenciadas, modo carrera y partidos online contra jugadores de todo el mundo.",
+      imagen: '../assets/img/gol-maestro.svg',
+      alt: "Portada de Gol Maestro 26: balón de fútbol sobre una cancha verde"
+    },
+    {
+      id: 6,
+      nombre: "Cancha Libre",
+      categoria: "Deportes",
+      plataforma: "PS5 · Nintendo Switch",
+      precio: 34990,
+      descripcion: "Básquetbol callejero 3 contra 3 con jugadas espectaculares y torneos en distintas ciudades.",
+      imagen: '../assets/img/cancha-libre.svg',
+      alt: "Portada de Cancha Libre: pelota de básquetbol sobre fondo naranja"
+    },
+    {
+      id: 7,
+      nombre: "Turbo Rally",
+      categoria: "Carreras",
+      plataforma: "PS5 · PC",
+      precio: 39990,
+      descripcion: "Carreras off-road en barro, nieve y desierto con más de 50 autos personalizables.",
+      imagen: '../assets/img/turbo-rally.svg',
+      alt: "Portada de Turbo Rally: bandera a cuadros y pista de carreras"
+    },
+    {
+      id: 8,
+      nombre: "Velocidad Extrema GT",
+      categoria: "Carreras",
+      plataforma: "Xbox Series · PC",
+      precio: 47990,
+      descripcion: "Simulador de autos deportivos en circuitos reales, con clima dinámico y modo multijugador.",
+      imagen: '../assets/img/velocidad-gt.svg',
+      alt: "Portada de Velocidad Extrema GT: carretera en perspectiva al atardecer"
+    },
+    {
+      id: 9,
+      nombre: "Imperios de Acero",
+      categoria: "Estrategia",
+      plataforma: "PC",
+      precio: 32990,
+      descripcion: "Construye tu imperio, administra recursos y conquista territorios en batallas por turnos.",
+      imagen: '../assets/img/imperios-acero.svg',
+      alt: "Portada de Imperios de Acero: torre de castillo con estandarte"
+    },
+    {
+      id: 10,
+      nombre: "Colonia Marte",
+      categoria: "Estrategia",
+      plataforma: "PC · Nintendo Switch",
+      precio: 27990,
+      descripcion: "Gestiona la primera colonia humana en Marte: oxígeno, energía y la felicidad de tus colonos.",
+      imagen: '../assets/img/colonia-marte.svg',
+      alt: "Portada de Colonia Marte: planeta rojo con una cúpula de colonia"
+    }
+  ]
+};

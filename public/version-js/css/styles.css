@@ -1,0 +1,213 @@
+/* ==========================================================
+   TechNova Games - estilos propios (complementan a Bootstrap 5)
+   Bootstrap se usa en modo oscuro: <html data-bs-theme="dark">
+   ========================================================== */
+
+:root {
+  --tn-fondo: #0b0f1a;        /* fondo general */
+  --tn-panel: #111827;        /* navbar, footer y secciones alternas */
+  --tn-neon: #22d3ee;         /* color de acento (cian neón) */
+  --tn-neon-oscuro: #06b6d4;
+  --tn-morado: #7c3aed;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;   /* evita que la navbar fija tape los anclajes */
+}
+
+body {
+  background-color: var(--tn-fondo);
+}
+
+/* ---------- Utilidades de color ---------- */
+.bg-tn { background-color: var(--tn-panel); }
+.text-neon { color: var(--tn-neon); }
+.bg-neon { background-color: var(--tn-neon); }
+.seccion-alterna { background-color: var(--tn-panel); }
+
+/* Botón con el color de la marca (sobrescribe variables de Bootstrap) */
+.btn-neon {
+  --bs-btn-color: #0b0f1a;
+  --bs-btn-bg: var(--tn-neon);
+  --bs-btn-border-color: var(--tn-neon);
+  --bs-btn-hover-color: #0b0f1a;
+  --bs-btn-hover-bg: var(--tn-neon-oscuro);
+  --bs-btn-hover-border-color: var(--tn-neon-oscuro);
+  --bs-btn-active-color: #0b0f1a;
+  --bs-btn-active-bg: var(--tn-neon-oscuro);
+  --bs-btn-active-border-color: var(--tn-neon-oscuro);
+  font-weight: 600;
+}
+
+/* ---------- Accesibilidad ---------- */
+.skip-link:focus {
+  position: fixed;
+  top: .5rem;
+  left: .5rem;
+  z-index: 2000;
+  padding: .5rem 1rem;
+  background: #fff;
+  color: #000;
+  border-radius: .375rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar ---------- */
+@media (min-width: 992px) {
+  .buscador { min-width: 260px; }
+}
+
+/* ---------- Portada (CSS Grid) ---------- */
+.hero {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(34, 211, 238, .25), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(124, 58, 237, .35), transparent 45%),
+    linear-gradient(135deg, #1e1b4b 0%, #312e81 55%, #0b0f1a 100%);
+  color: #fff;
+}
+
+.hero-kicker {
+  color: var(--tn-neon);
+  letter-spacing: .08em;
+}
+
+/* Una columna en móvil, dos columnas desde 992px */
+.hero-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-grid { grid-template-columns: 2fr 1fr; }
+}
+
+/* Datos destacados: cuadrícula de 2 x 2 */
+.hero-datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.hero-datos li {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: .75rem;
+  background-color: rgba(255, 255, 255, .06);
+}
+
+.hero-datos strong {
+  font-size: 1.75rem;
+  color: var(--tn-neon);
+}
+
+/* ---------- Filtro de categorías (Flexbox) ---------- */
+.filtro-categorias {
+  display: flex;
+  flex-wrap: wrap;   /* en pantallas chicas los botones bajan de línea */
+  gap: .5rem;
+}
+
+/* ---------- Grilla de videojuegos (CSS Grid) ---------- */
+/* auto-fill + minmax: caben tantas columnas como permita el ancho,
+   cada una de mínimo 240px. Así la grilla es responsiva sin media queries. */
+.grid-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- Tarjetas de videojuego ---------- */
+.tarjeta-juego {
+  border: 1px solid rgba(255, 255, 255, .08);
+  background-color: var(--tn-panel);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.tarjeta-juego:hover {
+  transform: translateY(-4px);
+  border-color: var(--tn-neon);
+  box-shadow: 0 .75rem 1.5rem rgba(34, 211, 238, .15);
+}
+
+.tarjeta-juego .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #1f2937;
+}
+
+.badge-categoria {
+  background-color: rgba(124, 58, 237, .25);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, .5);
+}
+
+.precio {
+  color: var(--tn-neon);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+/* ---------- Carrito ---------- */
+@media (min-width: 992px) {
+  .carrito-sticky {
+    position: sticky;
+    top: 5.5rem;
+  }
+}
+
+.item-carrito-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: .375rem;
+  flex-shrink: 0;
+}
+
+.item-carrito-nombre {
+  font-size: .9rem;
+  line-height: 1.2;
+}
+
+.control-cantidad .btn {
+  --bs-btn-padding-y: .1rem;
+  --bs-btn-padding-x: .5rem;
+}
+
+.control-cantidad .cantidad {
+  min-width: 2rem;
+  text-align: center;
+  align-self: center;
+  font-weight: 600;
+}
+
+/* Animación breve del contador al agregar un producto */
+@keyframes rebote {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.5); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.contador-rebote {
+  animation: rebote .4s ease;
+}
+
+/* Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  .tarjeta-juego,
+  .contador-rebote {
+    transition: none;
+    animation: none;
+  }
+  .tarjeta-juego:hover { transform: none; }
+}

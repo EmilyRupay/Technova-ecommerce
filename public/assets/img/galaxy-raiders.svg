@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Portada de Galaxy Raiders: nave espacial entre estrellas sobre fondo morado">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient></defs>
+  <rect width="600" height="450" fill="url(#g)"/>
+  <circle cx="80" cy="60" r="2" fill="#fff" opacity=".8"/><circle cx="520" cy="80" r="3" fill="#fff" opacity=".8"/><circle cx="150" cy="300" r="2" fill="#fff" opacity=".8"/><circle cx="470" cy="320" r="2" fill="#fff" opacity=".8"/><circle cx="300" cy="40" r="2" fill="#fff" opacity=".8"/><circle cx="560" cy="220" r="2" fill="#fff" opacity=".8"/><circle cx="40" cy="200" r="3" fill="#fff" opacity=".8"/><g transform="translate(300 190) rotate(-20)"><path d="M0 -90 L40 30 L0 10 L-40 30 Z" fill="#f472b6"/><path d="M-12 20 L0 70 L12 20 Z" fill="#fde047"/><circle cx="0" cy="-30" r="12" fill="#fff" opacity=".9"/></g>
+  <rect x="0" y="330" width="600" height="120" fill="#000" opacity=".55"/>
+  <text x="300" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#fff" letter-spacing="1">GALAXY RAIDERS</text>
+  <text x="300" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#f472b6" letter-spacing="4">ACCIÓN</text>
+</svg>

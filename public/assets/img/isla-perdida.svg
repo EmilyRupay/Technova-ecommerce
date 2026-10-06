@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Portada de Isla Perdida: isla con palmera en medio del mar">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15803d"/><stop offset="1" stop-color="#052e16"/></linearGradient></defs>
+  <rect width="600" height="450" fill="url(#g)"/>
+  <circle cx="460" cy="100" r="50" fill="#fde047"/><ellipse cx="300" cy="300" rx="180" ry="40" fill="#fcd34d"/><path d="M300 290 C300 220 310 180 330 150" stroke="#78350f" stroke-width="12" fill="none"/><path d="M330 150 C280 130 250 150 230 175 M330 150 C380 120 420 140 440 170 M330 150 C320 100 290 90 260 95 M330 150 C360 100 400 100 420 110" stroke="#16a34a" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <rect x="0" y="330" width="600" height="120" fill="#000" opacity=".55"/>
+  <text x="300" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#fff" letter-spacing="1">ISLA PERDIDA</text>
+  <text x="300" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#fde047" letter-spacing="4">AVENTURA</text>
+</svg>

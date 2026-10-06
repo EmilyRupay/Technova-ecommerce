@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es-CL" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TechNova Games (versión HTML + CSS + Bootstrap + JavaScript): catálogo de videojuegos filtrable y formulario de contacto.">
+  <title>TechNova Games | Versión HTML + JavaScript</title>
+
+  <!-- Bootstrap 5 e íconos (archivos locales) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <!-- Estilos propios (los mismos de la versión React) -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ========== ENCABEZADO Y NAVEGACIÓN ========== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-tn border-bottom border-secondary-subtle" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#inicio">
+          <i class="bi bi-controller text-neon fs-4" aria-hidden="true"></i>
+          <span>TechNova <span class="text-neon">Games</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                aria-controls="menu-principal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio"><i class="bi bi-house me-1" aria-hidden="true"></i>Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#catalogo"><i class="bi bi-controller me-1" aria-hidden="true"></i>Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope me-1" aria-hidden="true"></i>Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-filetype-jsx me-1" aria-hidden="true"></i>Versión React</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ========== PORTADA ========== -->
+    <section id="inicio" class="hero" aria-labelledby="titulo-hero">
+      <div class="container py-5">
+        <p class="text-uppercase fw-semibold mb-2 hero-kicker">Versión HTML · CSS · Bootstrap 5 · JavaScript</p>
+        <h1 id="titulo-hero" class="display-5 fw-bold">Tu próxima partida empieza aquí</h1>
+        <p class="lead mb-4">Catálogo generado con JavaScript a partir de un objeto, con filtro por categoría y formulario de contacto validado.</p>
+        <a href="#catalogo" class="btn btn-neon btn-lg">Ver catálogo <i class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <!-- ========== CATÁLOGO ========== -->
+    <section id="catalogo" class="container py-5" aria-labelledby="titulo-catalogo">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+          <h2 id="titulo-catalogo" class="h2 mb-1">Catálogo</h2>
+          <p id="estado-resultados" class="mb-0 text-body-secondary" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Filtros: menú desplegable por categoría + búsqueda por nombre -->
+        <form id="form-filtros" class="d-flex flex-wrap gap-2" role="search">
+          <div>
+            <label for="filtro-categoria" class="form-label small mb-1">Categoría</label>
+            <!-- Las opciones se generan con JavaScript desde tienda.categorias -->
+            <select id="filtro-categoria" class="form-select"></select>
+          </div>
+          <div>
+            <label for="filtro-texto" class="form-label small mb-1">Buscar</label>
+            <input id="filtro-texto" type="search" class="form-control" placeholder="Nombre del juego…" autocomplete="off">
+          </div>
+        </form>
+      </div>
+
+      <!-- Aquí JavaScript inserta las tarjetas (CSS Grid: .grid-juegos) -->
+      <div id="lista-videojuegos" class="grid-juegos"></div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="seccion-alterna py-5" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2 id="titulo-contacto" class="h2">Contacto</h2>
+            <p class="text-body-secondary">Escríbenos y el administrador del sitio te responderá a la brevedad.</p>
+          </div>
+          <div class="col-lg-7">
+            <!-- novalidate: la validación la hace nuestro JavaScript, no el navegador -->
+            <form id="form-contacto" class="card card-body" novalidate>
+              <div id="alerta-contacto" role="alert"></div>
+
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre *</label>
+                <input id="nombre" name="nombre" type="text" class="form-control" autocomplete="name">
+                <div class="invalid-feedback" id="error-nombre"></div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email *</label>
+                <input id="email" name="email" type="email" class="form-control" placeholder="nombre@correo.cl" autocomplete="email">
+                <div class="invalid-feedback" id="error-email"></div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="4" class="form-control" maxlength="500"></textarea>
+                <div class="invalid-feedback" id="error-mensaje"></div>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-neon"><i class="bi bi-send" aria-hidden="true"></i> Enviar mensaje</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="bg-tn text-body-secondary py-4 border-top border-secondary-subtle">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0"><i class="bi bi-controller text-neon" aria-hidden="true"></i> TechNova Games · Desarrollo Frontend I (PFY2201)</p>
+      <p class="mb-0 small">&copy; 2026 · Sitio de demostración, juegos y precios ficticios.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (menú colapsable), datos y lógica -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

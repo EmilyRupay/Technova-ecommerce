@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Portada de Colonia Marte: planeta rojo con una cúpula de colonia">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#78716c"/><stop offset="1" stop-color="#1c1917"/></linearGradient></defs>
+  <rect width="600" height="450" fill="url(#g)"/>
+  <circle cx="300" cy="420" r="300" fill="#b91c1c"/><circle cx="200" cy="200" r="20" fill="#7f1d1d"/><path d="M220 140 a80 80 0 0 1 160 0 Z" fill="#bae6fd" opacity=".8" transform="translate(0 0)"/><circle cx="480" cy="70" r="18" fill="#fef3c7"/>
+  <rect x="0" y="330" width="600" height="120" fill="#000" opacity=".55"/>
+  <text x="300" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#fff" letter-spacing="1">COLONIA MARTE</text>
+  <text x="300" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#f59e0b" letter-spacing="4">ESTRATEGIA</text>
+</svg>
